@@ -5,17 +5,15 @@
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
     <!-- create your content here. just a box for now -->
-  	<a-box position='0 0.5 0' material='opacity: 0.5; side: double'>
-		<a-torus-knot radius='0.26' radius-tubular='0.05'>
-			<a-animation attribute="rotation" to="360 0 0" dur="3000" easing='linear' repeat="indefinite"></a-animation>
-		</a-torus-knot>
-	</a-box>
+	<a-marker preset='hiro'>
+		<a-entity
+			  obj-model="AR/organism_3.obj">
+		</a-entity>
+	</a-marker>
+		
 		
     <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset='hiro'></a-marker-camera>
+    <a-entity camera></a-entity>
   </a-scene>
   </body>
 </html>
-
-
-
