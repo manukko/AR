@@ -3,16 +3,15 @@
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
   <body style='margin : 0px; overflow: hidden;'>
-    <a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
-    <!-- create your content here. just a box for now -->
-  	<a-assets>
-    <a-asset-item id="tree-obj" src="organism_3.obj"></a-asset-item>
-  </a-assets>
-  <a-entity obj-model="obj: #tree-obj"></a-entity>
-
-		
-    <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset='hiro'></a-marker-camera>
-  </a-scene>
+<a-scene embedded arjs = 'trackingMethod: best;'>
+<a-anchor hit-testing-enabled='true'>
+<a-entity
+position="0.5 -2 -0.5"
+scale="0.10 0.10 0.10"
+obj-model="obj: #tree-obj">
+</a-entity>
+</a-anchor>
+<a-camera-static/>
+<a-scene>
   </body>
 </html>
