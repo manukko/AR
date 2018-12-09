@@ -2,13 +2,13 @@
 <html>
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"> </script>
-<body style='margin : 0px; overflow: hidden;'>
+<body style='margin : 0px; overflow: hidden; debugUIEnabled: false;'>
     <a-scene embedded arjs='trackingMethod: best;'>
         <a-entity 
             obj-model="obj: url(https://rishavjayswal.github.io/augmented-reality/resources/couch.obj);
                        mtl: url(https://rishavjayswal.github.io/augmented-reality/resources/couch.mtl)">
         </a-entity>
-<div style='position: fixed; bottom: 10px; width:200%; height:200%; text-align: center; z-index: 1;'>
+<div style='position: fixed; top: 10px; width:200%; height:200%; text-align: center; z-index: 1;'>
     <button>
         HIDE OBJECTS
     </button>
