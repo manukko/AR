@@ -1,3 +1,4 @@
-document.querySelector("button").addEventListener("click", (e)=> {
-  // do stuff here.
+
+Button b = document.getElementById("theButton").addEventListener("click", (e)=> {
+document.getElementById("theButton").value="ora si che funziono<3";
 })
