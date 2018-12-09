@@ -5,9 +5,14 @@
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs='trackingMethod: best;'>
         <a-entity 
-            obj-model="obj: url(https://rishavjayswal.github.io/augmented-reality/resources/couch.obj)">
+            obj-model="obj: url(https://rishavjayswal.github.io/augmented-reality/resources/couch.obj);
+                       mtl: url(https://rishavjayswal.github.io/augmented-reality/resources/couch.mtl)">
         </a-entity>
-
+<div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+    <button>
+        HIDE OBJECTS
+    </button>
+</div>
       <a-marker-camera preset='hiro'></a-marker-camera>
       <a-camera-static/>
     </a-scene>
