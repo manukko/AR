@@ -4,11 +4,8 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"> </script>
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs='trackingMethod: best;'>
-  <a-assets>
-    <a-asset-item id="tree" src="/AR/helmet"></a-asset-item>
-  </a-assets>
-
-  <a-entity gltf-model="#tree"></a-entity>
+<a-entity gltf-model="url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf)" animation-mixer>
+   </a-entity>
 
       <a-marker-camera preset='hiro'></a-marker-camera>
       <a-camera-static/>
