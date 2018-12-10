@@ -4,9 +4,8 @@ document.getElementById("theButton").addEventListener("click", function(){
 console.log("qualcosa va");
 otherWindow = window.open("https://manukko.github.io/Bilboard-1/", "otherWindow");
 document.getElementById("theButton").value="ora si che funziono<3";
-if(counter<1){
   console.log(otherWindow.postMessage("otherFunc", "*"));
-}
+
   counter++;
   
 });
