@@ -5,7 +5,7 @@ console.log("qualcosa va");
 otherWindow = window.open("https://manukko.github.io/Bilboard-1/", "otherWindow");
 document.getElementById("theButton").value="ora si che funziono<3";
 if(counter<1){
-  otherWindow.postMessage("otherFunc", "*")
+  console.log(otherWindow.postMessage("otherFunc", "*"));
 }
   counter++;
   
