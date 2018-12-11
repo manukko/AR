@@ -4,9 +4,10 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"> </script>
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false;' crossorigin="anonymous">
-        <a-entity
-            gltf-model="url(./1small.gltf)">
-        </a-entity>
+<a-assets crossorigin="anonymous>
+    <a-asset-item crossorigin="anonymous id="tree-obj" src="organism_3.obj"></a-asset-item>
+  </a-assets>
+  <a-entity obj-model="obj: #tree-obj"></a-entity>
 <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>    
       
 <input type="button" value="Button Text" id="theButton" ></input> 
