@@ -1,23 +1,45 @@
 <!doctype HTML>
 <html>
+	
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"> </script>
-<body style='margin : 0px; overflow: hidden;'>
+<script src="disappear.js"></script>
+<body style='margin : 0px; overflow: hidden;' >
     <a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false;' crossorigin="anonymous">
-<a-assets crossorigin="anonymous">
-    <a-asset-item crossorigin="anonymous" id="tree-obj" src="organism_3.obj"></a-asset-item>
-    <a-asset-item id="tree-mtl" src="organism_3.mtl"></a-asset-item>
-  </a-assets>
-  <a-entity position="1800 -1200 6300" scale="0.8 0.8 0.8" obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
-<div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>    
-      
-<input type="button" value="Button Text" id="theButton" ></input> 
-</div>
-      <script src="button.js"> </script>
-      <a-marker-camera rotation="0 0 0" preset='hiro'></a-marker-camera>
-    </a-scene>
-<a-camera-static></a-camera-static>
+		<!-- handle unknown marker -->
 
-    
+		<!-- handle hiro marker            <a-entity id="pack" gltf-model="url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf)" animation-mixer>
+ -->
+	    <a-assets crossorigin="anonymous">
+
+    <a-asset-item crossorigin="anonymous" id="anger-obj" src="anger.obj"></a-asset-item>
+    <a-asset-item crossorigin="anonymous" id="anger-mtl" src="anger.mtl"></a-asset-item>
+    <a-asset-item crossorigin="anonymous" id="normal-obj" src="normal.obj"></a-asset-item>
+    <a-asset-item crossorigin="anonymous" id="normal-mtl" src="normal.mtl"></a-asset-item>
+    <a-asset-item crossorigin="anonymous" id="1_graycolor-obj" src="1_graycolor.obj"></a-asset-item>
+    <a-asset-item crossorigin="anonymous" id="1_graycolor-mtl" src="1_graycolor.mtl"></a-asset-item>	    
+
+  </a-assets>
+
+       <a-marker preset='hiro' position="0.094 0.119 -5.407" rotation="86.256 -171.95 154.498">
+	       <a-entity crossorigin="anonymous" position="37.62 -162.28 583.75" scale="0.1 0.1 0.1" obj-model="obj:1_graycolor.obj;mtl:1_graycolor.mtl">
+	       </a-entity>
+	       
+       </a-marker>
+	
+	<!-- handle kanji marker -->
+	<a-marker preset='kanji'>
+	    <a-marker preset='hiro' position="0.094 0.119 -5.407" rotation="86.256 -171.95 154.498">
+	       <a-entity crossorigin="anonymous" position="37.62 -162.28 583.75" scale="0.1 0.1 0.1" obj-model="obj:normal.obj;mtl:normal.mtl">
+	       </a-entity>
+	    
+		</a-marker>
+		
+	
+
+		
+		<!-- add a simple camera -->
+		<a-entity camera></a-entity>
+	</a-scene>
 </body>
 </html>
